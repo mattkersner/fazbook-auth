@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const models = require('../db/models/index');
+const moment = require('moment');
 
 function comparePass(userPassword, databasePassword) {
   return bcrypt.compareSync(userPassword, databasePassword);

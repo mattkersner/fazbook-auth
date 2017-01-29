@@ -3,37 +3,40 @@
     <% include ../partials/header.ejs %>
     <main>
       <div class="container">
-        <form action="/auth/register" method="post">
-          <div>
-            <label>Username:</label>
+        <form action="/auth/register" method="post" style="margin-top: 40px;">
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">Username:</label>
             <input type="text" name="username"/>
           </div>
-          <div>
-            <label>Password:</label>
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">Password:</label>
             <input type="password" name="password"/>
           </div>
-          <div>
-            <label>First Name:</label>
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">First Name:</label>
             <input type="text" name="firstName"/>
           </div>
-          <div>
-            <label>Last Name:</label>
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">Last Name:</label>
             <input type="text" name="lastName"/>
           </div>
-          <div>
-            <label>Email:</label>
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">Email:</label>
             <input type="text" name="email"/>
           </div>
-          <div>
-            <label>Date of Birth:</label>
+          <div class="input-field">
+            <label class="active" style="font-size: 1.5em">Date of Birth:</label>
             <input type="date" name="dob"/>
           </div>
           <div>
-            <input type="submit" value="Register"/>
+            <button class="btn waves-effect waves-light black" type="submit" name="action" style="margin-bottom: 10px">Submit
+            <i class="material-icons right">send</i>
+            </button>
           </div>
         </form>
       </div>
     </main>
     <% include ../partials/footer.ejs %>
+    <% include ../partials/jsdefaults.ejs %>
   </body>
 </html>

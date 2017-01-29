@@ -2,15 +2,18 @@
   <body>
     <% include ../partials/header.ejs %>
     <main>
-      <div class="container">
-        <p>Hello, this is the user profile page!</p>
-        <p><%= user.firstName %></p>
-        <p><%= user.lastName %></p>
-        <p><%= user.email %></p>
-        <p><%= user.dob %></p>
-        <a href="/auth/logout">LOG OUT</a>
-      </div>
+      <ul class="collection z-depth-3">
+    <li class="collection-item avatar" style="background-color: rgba(255, 255, 255, .6)">
+    <i class="material-icons prefix">account_circle</i>
+      <span class="title" style="font-size: 2em"><%= user.firstName %> <%= user.lastName %></span>
+      <p style="font-size: 1.2em">Email: <%= user.email %><br>
+         Birthday: <%= moment(user.dob).format('MM-DD-YYYY') %>
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons" style="color: black">grade</i></a>
+    </li>
+  </ul>
     </main>
     <% include ../partials/footer.ejs %>
+    <% include ../partials/jsdefaults.ejs %>
   </body>
 </html>

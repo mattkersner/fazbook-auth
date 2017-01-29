@@ -1,21 +1,90 @@
+body {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
 header {
-  background-color: teal;
   color: white;
+  padding: 5px;
 }
 
 header .container h1 {
   font-size: 36px;
 }
 
+header a:hover {
+  color: #00B7FF;
+}
+
 main{
+  flex: 1 0 auto;
+  background-image: url('http://www.pixelstalk.net/wp-content/uploads/2016/08/Best-beach-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
   flex: 1 0 auto;
 }
 
-footer {
-  background-color: teal;
+footer a {
   color: white;
 }
 
-a {
+footer a:hover {
   color: #00B7FF;
 }
+
+iframe {
+  width: 200px;
+  height: 200px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    font-size: 2em;
+}
+
+.input-field {
+  margin-top: 30px;
+}
+
+  /* label color */
+   .input-field label {
+     color: black;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: black;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid black;
+     box-shadow: 0 1px 0 0 black;
+   }
+   .input-field input[type=password]:focus + label {
+     color: black;
+   }
+   /* label underline focus color */
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid black;
+     box-shadow: 0 1px 0 0 black;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: black;
+   }
